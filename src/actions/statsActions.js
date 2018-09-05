@@ -1,16 +1,12 @@
 import { FETCH_COMPETITIONS, FETCH_CLUBS, FETCH_HISTORICAL_TABLE } from './types';
-import { BASE_PATH, USER, PASSWORD } from '../config/config';
+import { BASE_PATH } from '../config/config';
 import axios from 'axios';
 
 
 export const fetchCompetitions = () => dispatch => {
 	axios({
 		url: BASE_PATH + '/competitions/',
-		method: 'get',
-		auth: {
-			username: USER,
-			password: PASSWORD,
-		}
+		method: 'get'
 	})
 	.then(res => dispatch({
 		type: FETCH_COMPETITIONS,
@@ -23,11 +19,7 @@ export const fetchCompetitions = () => dispatch => {
 export const fetchCompetitionFootballClubs = (competitionId) => dispatch => {
 	axios({
 		url: BASE_PATH + '/competitions/' + competitionId + '/',
-		method: 'get',
-		auth: {
-			username: USER,
-			password: PASSWORD,
-		}
+		method: 'get'
 	})
 	.then(res => dispatch({
 		type: FETCH_CLUBS,
@@ -41,11 +33,7 @@ export const fetchCompetitionFootballClubHistoricalTable = (competitionName, foo
 
 	axios({
 		url: BASE_PATH + '/competition-results/' + encodeURIComponent(competitionName) + '/' + encodeURIComponent(footballClubName) + '/historical-table/',
-		method: 'get',
-		auth: {
-			username: USER,
-			password: PASSWORD,
-		}
+		method: 'get'
 	})
 	.then(res => dispatch({
 		type: FETCH_HISTORICAL_TABLE,
