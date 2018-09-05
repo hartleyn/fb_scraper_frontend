@@ -1,0 +1,22 @@
+// file: src/actions/types.js
+export const SET_TOKEN = "SET_TOKEN";
+export const REMOVE_TOKEN = "REMOVE_TOKEN";
+export const FETCH_ALBUMS = "FETCH_ALBUMS";
+export const NEW_ALBUM = "NEW_ALBUM";
+export const FETCH_ORDERS = "FETCH_ORDERS";
+export const FETCH_ORDERS_DETAILS = "FETCH_ORDERS_DETAILS";
+export const NEW_ORDER = "NEW_ORDER";
+export const FETCH_HERO_STREAMS = "FETCH_HERO_STREAMS";
+export const FETCH_USER_STREAMS = "FETCH_USER_STREAMS";
+export const FETCH_DISPLAY_NAMES = "FETCH_DISPLAY_NAMES";
+export const SHOW_BROADCASTS = "SHOW_BROADCASTS";
+export const LIFT_PIECE = "LIFT_PIECE";
+export const DROP_PIECE = "DROP_PIECE";
+export const RELEASE_PIECE = "RELEASE_PIECE";
+export const STARTING_PIECES = "STARTING_PIECES";
+export const PROCESS_ATTACK_SQUARES = "PROCESS_ATTACK_SQUARES";
+export const CASTLE_KING = "CASTLE_KING";
+export const END_TURN = "END_TURN";
+export const FETCH_COMPETITIONS = "FETCH_COMPETITIONS";
+export const FETCH_CLUBS = "FETCH_CLUBS"
+export const FETCH_HISTORICAL_TABLE = "FETCH_HISTORICAL_TABLE";
