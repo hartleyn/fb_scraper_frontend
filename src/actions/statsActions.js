@@ -1,11 +1,11 @@
-import { FETCH_COMPETITIONS, FETCH_CLUBS, FETCH_HISTORICAL_TABLE } from './types';
+import { FETCH_COMPETITIONS, FETCH_CLUBS, FETCH_HISTORICAL_TABLE, FETCH_MOCK_SUPER_LEAGUE_TABLE } from './types';
 import { BASE_PATH } from '../config/config';
 import axios from 'axios';
 
 
 export const fetchCompetitions = () => dispatch => {
 	axios({
-		url: BASE_PATH + '/competitions/',
+		url: BASE_PATH + '/v1/competitions/',
 		method: 'get'
 	})
 	.then(res => dispatch({
@@ -18,7 +18,7 @@ export const fetchCompetitions = () => dispatch => {
 
 export const fetchCompetitionFootballClubs = (competitionId) => dispatch => {
 	axios({
-		url: BASE_PATH + '/competitions/' + competitionId + '/',
+		url: BASE_PATH + '/v1/competitions/' + competitionId + '/',
 		method: 'get'
 	})
 	.then(res => dispatch({
@@ -30,13 +30,25 @@ export const fetchCompetitionFootballClubs = (competitionId) => dispatch => {
 
 
 export const fetchCompetitionFootballClubHistoricalTable = (competitionName, footballClubName) => dispatch => {
-
 	axios({
-		url: BASE_PATH + '/competition-results/' + encodeURIComponent(competitionName) + '/' + encodeURIComponent(footballClubName) + '/historical-table/',
+		url: BASE_PATH + '/v1/competition-results/' + encodeURIComponent(competitionName) + '/' + encodeURIComponent(footballClubName) + '/historical-table/',
 		method: 'get'
 	})
 	.then(res => dispatch({
 		type: FETCH_HISTORICAL_TABLE,
+		payload: res.data,
+	}))
+	.catch(error => console.error(error));
+}
+
+
+export const fetchCompetitionFootballClubMockSuperLeagueTable = (season) => dispatch => {
+	axios({
+		url: `${BASE_PATH}/v1/competition-results/${season}/mock-super-league/`,
+		method: 'get',
+	})
+	.then(res => dispatch({
+		type: FETCH_MOCK_SUPER_LEAGUE_TABLE,
 		payload: res.data,
 	}))
 	.catch(error => console.error(error));

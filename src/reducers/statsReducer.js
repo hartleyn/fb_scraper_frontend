@@ -1,10 +1,13 @@
-import { FETCH_COMPETITIONS, FETCH_CLUBS, FETCH_HISTORICAL_TABLE } from '../actions/types';
+import { FETCH_COMPETITIONS, FETCH_CLUBS, FETCH_HISTORICAL_TABLE, FETCH_MOCK_SUPER_LEAGUE_TABLE } from '../actions/types';
 
 
 const initialState = {
 	competitions: [],
 	footballClubs: [],
 	historicalTable: [],
+	mockSuperLeagueTable: [],
+	newHistoricalTable: false,
+	newMockSuperLeagueTable: false,
 }
 
 export default function(state=initialState, action) {
@@ -22,7 +25,16 @@ export default function(state=initialState, action) {
 		case FETCH_HISTORICAL_TABLE:
 			return {
 				...state,
+				newHistoricalTable: true,
 				historicalTable: action.payload,
+				newMockSuperLeagueTable: false,
+			}
+		case FETCH_MOCK_SUPER_LEAGUE_TABLE:
+			return {
+				...state,
+				newMockSuperLeagueTable: true,
+				mockSuperLeagueTable: action.payload,
+				newHistoricalTable: false,
 			}
 		default:
 			return state;

@@ -1,6 +1,6 @@
 .App {
-  text-align: center;
-  width: 90%;
+  /*text-align: center;*/
+  width: 100%;
   margin: auto;
 }
 
@@ -33,20 +33,172 @@
 
 /* CUSTOM STYLES */
 
+.brand-logo {
+  
+}
 
 .hidden {
   display: none;
 }
 
 .navBar {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  height: 50px;
+}
+
+.navBarLinks {
+  height: 50px;
+  font-family: 'Raleway', Arial, sans-serif;
 }
 
 .mainApp {
-  width: 100%;
+  width: 97%;
+  /*width: 100%;*/
+  margin: auto;
+  padding-top: 70px;
 }
 
 .results-table-row {
   height: 80px;
   border: 1px solid transparent;
+}
+
+#grid-container {
+  text-align: left;
+  z-index: -1;
+}
+
+.club-select {
+  z-index: 100;
+}
+
+#main-sidebar {
+  border: 1px solid transparent;
+  border-radius: 2%;
+  height: 400px;
+  position: fixed;
+}
+
+.card {
+  margin-top: 0px;
+}
+
+#home-cards-container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.home-cards {
+  height: 332px;
+  /*border-radius: 2%;
+  width: 97%;
+  margin-right: 0px;
+  margin-left: 27px;*/
+}
+
+.home-cards-icons {
+  /*margin-left: 180px;*/ 
+}
+
+hr.blog-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.blog-info {
+  text-align: right;
+}
+
+
+.blog-title {
+  font-family: "Palantino", serif;
+}
+
+.share-buttons {
+  width: 32px;
+}
+
+.clickable {
+  cursor: hand;
+}
+
+.title-card {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 1px 5px;
+}
+
+.parallax-container {
+  height: 700px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.carousel-container {
+  height: 400px;
+}
+
+
+/* BURGER MENU STYLES */
+/**********************/
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 25px;
+  top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding: 0.8em;
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.menu-item {
+  color: #b8b7ad !important;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
