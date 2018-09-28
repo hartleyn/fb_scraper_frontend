@@ -80,8 +80,9 @@ class ResultsTable extends Component {
                             columnDefs={this.state.columnDefs}
                             rowData={this.props.rowData}
                             onGridReady={this.onGridReady}
-                            enableColResize='true'
-                          	colResizeDefault='shift'
+                            enableSorting={true}
+                            enableColResize={true}
+                          	colResizeDefault='shift'   
                         >
 
                         </AgGridReact>
