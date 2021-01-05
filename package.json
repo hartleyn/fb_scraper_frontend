@@ -11,7 +11,7 @@
     "ag-grid": "^18.1.2",
     "ag-grid-react": "^18.1.0",
     "ajv": "^6.5.3",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "disqus-react": "^1.0.5",
     "fetch": "^1.1.0",
     "html-react-parser": "^0.4.7",
